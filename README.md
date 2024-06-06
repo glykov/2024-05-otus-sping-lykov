@@ -1,1 +1,2 @@
-# OTUS Spring Framework Developer\nMay 2024\n
+# OTUS Spring Framework Developer
+May 2024
