@@ -10,7 +10,7 @@ import ru.otus.hw.config.AppProperties;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration("classpath:test-context.xml")
+@ContextConfiguration("classpath:test-context-2.xml")
 public class TestFileNameProviderTest {
     @Autowired
     AppProperties provider;
@@ -18,6 +18,6 @@ public class TestFileNameProviderTest {
     @Test
     public void testTestFileNameProvider() {
         assertThat(provider).isNotNull();
-        assertThat(provider.getTestFileName()).isEqualTo("classpath:questions.csv");
+        assertThat(provider.getTestFileName()).isEqualTo("test-questions.csv");
     }
 }

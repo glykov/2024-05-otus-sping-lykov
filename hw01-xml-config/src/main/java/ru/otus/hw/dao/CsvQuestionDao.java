@@ -10,9 +10,8 @@ import ru.otus.hw.exceptions.QuestionReadException;
 
 import java.io.InputStreamReader;
 import java.io.Reader;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.List;
+import java.util.Objects;
 
 @RequiredArgsConstructor
 public class CsvQuestionDao implements QuestionDao {
@@ -29,6 +28,7 @@ public class CsvQuestionDao implements QuestionDao {
         try (Reader reader =
                      new InputStreamReader(
                              ClassLoader.getSystemResourceAsStream(fileNameProvider.getTestFileName()))) {
+            Objects.requireNonNull(reader);
             CsvToBean<QuestionDto> cb = new CsvToBeanBuilder<QuestionDto>(reader)
                     .withType(QuestionDto.class)
                     .withSkipLines(1)
