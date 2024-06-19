@@ -14,7 +14,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration("classpath:test-context-2.xml")
+@ContextConfiguration("classpath:test-context.xml")
 public class QuestionDaoTestHappyFlow {
     @Autowired
     TestFileNameProvider fileNameProvider;

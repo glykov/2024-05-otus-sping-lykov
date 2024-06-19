@@ -8,7 +8,7 @@
         https://www.springframework.org/schema/util/spring-util.xsd">
 
     <bean id="testFileNameProvider"   class="ru.otus.hw.config.AppProperties">
-        <constructor-arg name="testFileName" value="classpath:questions.csv"/>
+        <constructor-arg name="testFileName" value="test-questions.csv"/>
     </bean>
 
     <bean id="questionDao" class="ru.otus.hw.dao.CsvQuestionDao">
