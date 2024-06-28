@@ -6,7 +6,6 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Component
-@PropertySource("classpath:application.properties")
 @Data
 public class AppProperties implements TestConfig, TestFileNameProvider {
     // внедрить свойство из application.properties

@@ -1,4 +1,4 @@
-package ru.otus.hw;
+package ru.otus.hw.dao;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -9,7 +9,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import ru.otus.hw.config.AppProperties;
-import ru.otus.hw.dao.QuestionDao;
 import ru.otus.hw.domain.Question;
 
 import java.util.List;
@@ -17,11 +16,11 @@ import java.util.List;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = {ReadingIntegrationTest.class})
+@ContextConfiguration(classes = {CsvQuestionDaoTest.class})
 @Configuration
-@ComponentScan
+@ComponentScan(basePackages = "ru.otus.hw")
 @TestPropertySource("classpath:test.properties")
-public class ReadingIntegrationTest {
+public class CsvQuestionDaoTest {
     @Autowired
     AppProperties properties;
 

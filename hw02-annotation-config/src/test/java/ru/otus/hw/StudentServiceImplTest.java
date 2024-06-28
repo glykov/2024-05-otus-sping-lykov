@@ -10,7 +10,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-public class MockServiceTest {
+public class StudentServiceImplTest {
 
     @Test
     public void testStudentService() {
